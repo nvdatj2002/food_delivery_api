@@ -7,7 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     //
-    protected $filltable = [
-        'id', 'idStore','name','status'
+    protected $primarykey = 'id';
+
+    protected $fillable = [
+        'name',
+        
     ];
+
+    public function store(){
+       return $this->belongsTo(Store::class, 'idStore');
+    }
+
+    public function productDetails(){
+        return $this->hasMany(ProductDetail::class,'idProduct','id');
+    }
+ 
+
 }

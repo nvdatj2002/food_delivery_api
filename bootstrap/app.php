@@ -90,6 +90,8 @@ $app->routeMiddleware([
 | totally optional, so you are not required to uncomment this line.
 |
 */
+$app->register(Kreait\Laravel\Firebase\ServiceProvider::class);
+// $app->register(GoogleMaps\ServiceProvider\GoogleMapsServiceProvider::class);
 $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
 $app->register(App\Providers\AppServiceProvider::class);
 $app->register(App\Providers\AuthServiceProvider::class);

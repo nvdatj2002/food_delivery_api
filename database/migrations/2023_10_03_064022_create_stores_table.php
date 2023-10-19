@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string("password");
             $table->string("email");
             $table->string("phone");
-            $table->string("image");
-            $table->integer("address");
-            $table->integer("id_type_account");
+            $table->string("address");
+            $table->boolean("gender");
+            $table->boolean("status");
             $table->timestamps();
         });
     }

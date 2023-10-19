@@ -18,10 +18,10 @@ return new class extends Migration
             $table->string("password");
             $table->string("email");
             $table->string("phone");
-            $table->string("image");
-            $table->integer("address");
-            $table->integer("id_type_account");
-            $table->integer("status");
+            $table->boolean("gender");
+            $table->date("birthDay");
+            $table->string("address");
+            $table->boolean("status");
             $table->timestamps();
         });
     }

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->integer('idOrder');
             $table->integer('type_account');
             $table->integer('idStatus');
+            $table->integer('idAdrress');
             $table->timestamps();
         });
     }

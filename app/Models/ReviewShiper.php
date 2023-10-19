@@ -7,7 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 class ReviewShiper extends Model
 {
     //
-    protected $filltable = [
-        'id', 'idShiper','idCustomer','content','quanlity'
+    protected $primarykey = 'id';
+
+    protected $fillable = [
+        'content',
+        'quanlity'
     ];
+
+    public function shiper(){
+        return $this->belongsTo(Shiper::class,'idShiper');
+    }
+    public function customer(){
+        return $this->belongsTo(Shiper::class,'idCustomer');
+    }
 }

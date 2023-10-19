@@ -6,8 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Status extends Model
 {
+    protected $primarykey = 'id';
     //
-    protected $filltable = [
-        'id','name'
+    protected $fillable = [
+        'name'
     ];
+
+    public function status(){
+        return $this -> hasMany(StatusOrder::class, 'idStatus', 'id');
+    }
 }
